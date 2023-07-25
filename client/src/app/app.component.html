@@ -1,0 +1,21 @@
+<div class="main-div">
+  <div class="parent">
+    <mat-card style="color:azure">
+      <mat-card-content style="color:bisque">
+        <form>
+          <div>
+            <mat-form-field class="form-field-input ">
+              <div style="text-align:center;">
+                <mat-label *ngIf="domain.value == ''">Enter URL</mat-label>
+                <input matInput type="text" #domain maxlength="50">
+              </div>
+            </mat-form-field>
+          </div>
+          <div>
+            <button type="submit" (click)="shortenURL(domain)" class="btn btn-primary">Get Tiny URL</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
