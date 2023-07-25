@@ -1,5 +1,7 @@
 package document;
 
+import java.time.LocalDateTime;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -18,6 +20,16 @@ public class UrlsMappingDocument {
 	private String tinyurl;
 	@Field("isTinyUrlActive")
 	private boolean isTinyUrlActive = true;
+	@Field("created_date")
+	private LocalDateTime created_date;
+
+	public LocalDateTime getCreated_date() {
+		return created_date;
+	}
+
+	public void setCreated_date(LocalDateTime created_date) {
+		this.created_date = created_date;
+	}
 
 	public String getId() {
 		return id;
